@@ -8,7 +8,7 @@
 </head>
 <body>
     <script type = "text/javascript">
-    function tituloLibro(frase) {
+    function palabra(frase) {
     if (frase.constructor != String) {
         return null;
     }
@@ -18,11 +18,11 @@
     return frase.replace(patron, (p) => p.charAt(0).toUpperCase()  + p.substring(1).toLowerCase());
 }
 
-console.log(tituloLibro('Las quesadillas de Jutiapa')); // Javascript Es Tremendo
+console.log(palabra('desarrollo web'));
 
 console.log();
 
-console.log(tituloLibro(42));   // null
+console.log(palabra(42));  
     
     </script>
     
