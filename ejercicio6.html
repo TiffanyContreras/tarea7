@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='foo'></div>
+    <script type = "text/javascript">
+    //inciso 1  Usando foreach, despliegue los nombres del arreglo en una lista ordenda en el dom.
+    const original=["Diana", "Monica", "Maria", "Breny"];
+    let toda_la_banda = original;
+    var foo ="" ;
+    toda_la_banda.sort().forEach(element => foo= foo+`<li> ${element} </li>`);
+    document.getElementById("foo").innerHTML = foo;
+
+    //inciso 2 Saque una copia del arreglo pero que no incluya a Monica
+    
+
+        toda_la_banda.splice(3,1);
+        let copia=toda_la_banda;
+        console.log(copia);
+        
+    
+    //inciso 3 En el nuevo arreglo, investigue la forma de remover a Breny.
+        copia.splice(0,1);
+        console.log(copia);
+    
+    // inciso 4 Agregue a José al principio del nuevo arreglo.
+        copia.unshift('José');
+        console.log(copia);
+
+    // inciso 4 Agregue su nombre el final del nuevo arreglo.
+        copia.push('Tiffany');
+        console.log(copia);
+
+    // inciso Obtenga el ítem de Diana
+        var nombre;
+        for (let step = 0; step < copia.length; step++) 
+        {
+            if(copia[step] == 'Diana')
+            {
+                nombre = copia[step];
+            }
+        }
+        console.log(nombre);
+    
+      // inciso 4 Agregue su nombre el final del nuevo arreglo.
+
+      const original2=["Diana", "Monica", "Maria", "Breny"];
+        console.log(original2.sort().slice(1,3));
+
+        function indice(){
+            const original3=["Diana", "Monica", "Maria", "Breny"];
+            var numero = -1;
+            for (let step = 0; step < original3.length; step++) 
+            {
+                if(original3[step]=='Monica')
+                {
+                    numero=step;
+                }
+            }
+            console.log(numero+1);
+        }
+        indice();
+
+    </script>
+
+    
+    
+</body>
+</html>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+   
+        var productos=[
+            {
+                nombre: 'cocacola',
+                lugar: 'inventory',
+                tipo: 'beverage',
+                precio: 60 
+            }
+            ,
+            {
+                nombre: 'pepsi',
+                lugar: 'inventory',
+                tipo: 'beverage',
+                precio: 60 
+            }
+            ,
+            {
+                nombre: 'pe',
+                lugar: 'invento',
+                tipo: 'beverage',
+                precio: 60 
+            }
+        ]
+
+
+
+
+    function totalByCategory(lugar,tipo)
+    {
+        
+        let sum = productos.filter(e => e.lugar==lugar).filter(e => e.tipo==tipo).reduce((total,sum) => total + sum.precio,0);
+        return sum
+    }
+console.log(totalByCategory('inventory','beverage'));
+
+
+</script>
+    
+</body>
+</html>

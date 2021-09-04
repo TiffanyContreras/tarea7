@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+    function BuscarSumaPar( array1, num) {
+        for (let step = 0; step < array1.length; step++) {
+            var vari =0;
+            for (let step1 = 0; step1 < array1.length; step1++) {
+                if(parseInt(array1[step])+parseInt(array1[step1])==num){
+                    return `${array1[step]} ${array1[step1]}`;
+                    step1=array1.length;
+                    vari=1;
+                }
+                if(vari ==1){
+                    step=array1.length;
+                }
+            }              
+        }       
+
+    }
+
+        var Par = BuscarSumaPar([6, 20, 4, 17, 10, 2], 27);
+
+        console.log(Par);
+
+
+
+</script>
+    
+</body>
+</html>
+
